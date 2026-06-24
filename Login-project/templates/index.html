@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HirePilot AI - Sign In</title>
+   <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="auth-container">
+
+        <!-- Left Panel -->
+        <div class="left-panel">
+
+            <div class="logo">
+                
+               <!--  <div class="logo-dot"></div> -->
+                 <img src="{{ url_for('static', filename='Container.png') }}" alt="Logo">
+                <span>HIREPILOT AI</span>
+            </div>
+
+            <div class="hero-content">
+                <h1>
+                    Welcome to<br>
+                    HirePilot AI
+                </h1>
+
+                <p>
+                    Experience the future of talent acquisition.
+                    Our enterprise-grade AI ensures you find the perfect
+                    match with surgical precision and ethical intelligence.
+                </p>
+
+                <div class="feature-cards">
+
+                    <div class="feature-card">
+                        <img src="{{ url_for('static', filename='Icon.png') }}" alt="Logo">
+                        <h4>AI Analysis</h4>
+                        <span>98.7% Trust</span>
+                    </div>
+
+                    <div class="feature-card">
+                        <img src="{{ url_for('static', filename='Icon 2.png') }}" alt="Logo">
+                        <h4>Enterprise Trust</h4>
+                        <span>Secure</span>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Right Panel -->
+        <div class="right-panel">
+
+            <div class="login-card">
+
+                <h2>Sign In</h2>
+                <p class="subtitle">
+                    Access your executive recruitment dashboard.
+                </p>
+
+                <button class="google-btn">
+                    <img src="{{ url_for('static', filename='google.png') }}" alt="Logo">
+                    Continue with Google
+                </button>
+
+                <div class="divider">
+                    <span>OR USE EMAIL</span>
+                </div>
+
+                <form action="/login" method="post">
+
+                    <label>Email Address</label>
+                    
+                    
+                    
+                    <input
+                        type="email"
+                        name="email"
+                        placeholder="executive@company.ai" required
+                       
+                    />
+                    
+                    
+                    <div class="password-row">
+                        <label>Password</label>
+                        <a href="#">Forgot?</a>
+                    </div>
+
+                    <input
+                        type="password"
+                        name="password"
+                        placeholder="••••••••••"required
+                    />
+
+                    <button class="login-btn">
+                        Login to Dashboard →
+                    </button>
+
+                </form>
+
+                <div class="bottom-links">
+                    Don't have an account?
+                    <a href="#">Sign up</a>
+                </div>
+
+                <div class="company-link">
+                    <img src="{{ url_for('static', filename='compony.png') }}" alt="Logo">
+                     CREATE COMPANY ACCOUNT
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+</html>
